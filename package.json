@@ -106,6 +106,7 @@
     "react-native-reanimated": ">=3.10.1"
   },
   "scripts": {
+    "postinstall": "npm run compile",
     "lint": "npm run tslint && npm run srclint && npm run applint",
     "srclint": "eslint site scripts --ext '.js,.jsx' --fix",
     "tslint": "eslint components --fix && npm run compile && rm -rf lib",
