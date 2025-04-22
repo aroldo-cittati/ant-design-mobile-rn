@@ -4,7 +4,7 @@ import { PickerPropsType } from '../picker/PropsType';
 import { DatePickerFilter, Precision } from './date-picker-utils';
 import { PickerDate } from './util';
 export type RenderLabel = (type: Precision | 'now', data: number) => ReactNode;
-export interface DatePickerPropsType extends Pick<PickerPropsType, 'onPickerChange' | 'onVisibleChange' | 'style' | 'styles' | 'itemStyle' | 'numberOfLines' | 'title' | 'okText' | 'dismissText' | 'visible' | 'children' | 'renderMaskTop' | 'renderMaskBottom'> {
+export interface DatePickerPropsType extends Pick<PickerPropsType, 'onPickerChange' | 'onVisibleChange' | 'style' | 'styles' | 'itemStyle' | 'itemHeight' | 'numberOfLines' | 'title' | 'okText' | 'dismissText' | 'visible' | 'children' | 'renderMaskTop' | 'renderMaskBottom'> {
     value?: PickerDate;
     defaultValue?: PickerDate;
     /**

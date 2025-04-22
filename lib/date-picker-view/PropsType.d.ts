@@ -3,7 +3,7 @@ import { DatePickerFilter, Precision } from '../date-picker/date-picker-utils';
 import { PickerDate } from '../date-picker/util';
 import { PickerValueExtend, PickerViewPropsType } from '../picker-view/PropsType';
 export type RenderLabel = (type: Precision | 'now', data: number) => ReactNode;
-export interface DatePickerViewPropsType extends Pick<PickerViewPropsType, 'style' | 'itemStyle' | 'numberOfLines' | 'renderMaskTop' | 'renderMaskBottom'> {
+export interface DatePickerViewPropsType extends Pick<PickerViewPropsType, 'style' | 'itemStyle' | 'itemHeight' | 'numberOfLines' | 'renderMaskTop' | 'renderMaskBottom'> {
     value?: PickerDate;
     defaultValue?: PickerDate;
     mode?: Precision | 'date';

@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleProp, ViewStyle } from 'react-native';
+import { NativeEventSubscription, StyleProp, ViewStyle } from 'react-native';
 import { ModalPropsType } from './PropsType';
 export interface IModalPropTypes extends Pick<ModalPropsType, 'animateAppear' | 'children' | 'maskClosable' | 'modalType' | 'onAnimationEnd' | 'onClose' | 'onRequestClose' | 'visible'> {
     animationDuration?: number;
@@ -12,6 +12,8 @@ export default class RCModal extends React.Component<IModalPropTypes, any> {
     static defaultProps: IModalPropTypes;
     animMask: any;
     animDialog: any;
+    /** 支持0.67 react-native BackHandler新接口，移除removeEventListener接口使用 */
+    backHandlerSubscription: NativeEventSubscription | null;
     constructor(props: IModalPropTypes);
     UNSAFE_componentWillReceiveProps(nextProps: IModalPropTypes): void;
     shouldComponentUpdate(nextProps: IModalPropTypes, nextState: any): boolean;
