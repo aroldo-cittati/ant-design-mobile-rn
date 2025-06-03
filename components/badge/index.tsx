@@ -24,7 +24,7 @@ export default class Badge extends React.Component<BadgeProps, any> {
   render() {
     // tslint:disable:prefer-const
     let {
-      styles,
+      styles: _,
       style,
       children,
       text,
