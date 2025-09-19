@@ -66,20 +66,18 @@ Next, install the required peer dependencies. You need to run different commands
    ```bash
    npm install react-native-gesture-handler react-native-reanimated react-native-worklets
    ```
-   you also need to manually add the `react-native-worklets/plugin` plugin to your `babel.config.js`
+  You also need to manually add the `react-native-worklets/plugin` plugin to your `babel.config.js`:
 
-   ```
-    module.exports = {
-        presets: [
-          ... // don't add it here :)
-        ],
-        plugins: [
-          ...
-          'react-native-worklets/plugin',
-        ],
-      };
-   ```
-   see more details in [react-native-reanimated installation doc](https://docs.swmansion.com/react-native-reanimated/docs/fundamentals/getting-started/)
+  ```js
+  module.exports = {
+    presets: [
+      ... // don't add it here :)
+    ],
+    plugins: [
+      ...
+      'react-native-worklets/plugin',
+    ],
+  };
 
  - For iOS with bare React Native project, make sure you have CocoaPods installed. Then install the pods to complete the installation:
    ```bash
